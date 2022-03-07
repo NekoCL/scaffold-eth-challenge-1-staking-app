@@ -19,7 +19,6 @@ contract Staker {
   uint256 public deadline = block.timestamp + 72 hours;
 
   event Stake(address indexed sender, uint256 amount);
-  event emitBal(uint256 balAmount);
 
   modifier deadlineNotReached() {
     require(timeLeft() > 0, 'Deadline reached');
